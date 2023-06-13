@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">openAI-app</string>
+    <string name="sendBtn">"Send "</string>
+</resources>
