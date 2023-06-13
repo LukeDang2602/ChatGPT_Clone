@@ -91,11 +91,13 @@ fun ChatScreen(chatViewModel: ChatViewModel) {
                 message = message
             )
             ChatInput(
-                modifier = Modifier.constrainAs(chatInput){
-                    start.linkTo(parent.start)
-                    end.linkTo(parent.end)
-                    bottom.linkTo(parent.bottom)
-                }.fillMaxWidth(),
+                modifier = Modifier
+                    .constrainAs(chatInput) {
+                        start.linkTo(parent.start)
+                        end.linkTo(parent.end)
+                        bottom.linkTo(parent.bottom)
+                    }
+                    .fillMaxWidth(),
                 sendMessage = { mess ->
                 chatViewModel.sendMessage(mess)
             } )
@@ -122,6 +124,7 @@ fun ChatInput(modifier: Modifier, sendMessage:(String) -> Unit) {
                 end.linkTo(sendBtn.start)
             },
             value = mess,
+            placeholder = { Text(text = stringResource(id = R.string.ask_me))},
             onValueChange = {newMess ->
                 mess = newMess
             }

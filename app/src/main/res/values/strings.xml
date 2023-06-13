@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">openAI-app</string>
     <string name="sendBtn">"Send "</string>
+    <string name="ask_me">Ask me anything</string>
 </resources>
